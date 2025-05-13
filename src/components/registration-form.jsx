@@ -4,7 +4,8 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { CalendarIcon } from "lucide-react"
 import { format } from "date-fns"
-import VerifyEmail  from "../../app/verify-email/page.jsx";
+import VerifyEmail from '../components/verify-email/page';
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
