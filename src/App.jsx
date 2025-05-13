@@ -2,7 +2,7 @@ import React from 'react'
 import {LoginForm} from "@/components/login-form.jsx";
 import {RegistrationForm} from "@/components/registration-form";
 import {BrowserRouter,Routes ,Route} from "react-router-dom";
-
+import VerifyEmail from "../app/verify-email/page.jsx";
 
 const App = () => {
     return (

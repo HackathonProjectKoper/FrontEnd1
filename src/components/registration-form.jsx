@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { CalendarIcon } from "lucide-react"
 import { format } from "date-fns"
-
+import VerifyEmail  from "../../app/verify-email/page.jsx";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -31,7 +31,8 @@ const formSchema = z
 
 export function RegistrationForm() {
   const [date, setDate] = useState()
-
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
   const {
     register,
     handleSubmit,
