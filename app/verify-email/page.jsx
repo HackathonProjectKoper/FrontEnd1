@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
+import {Link} from "react-router-dom";
 import { PenLine } from "lucide-react"
 
 export default function VerifyEmail() {
-  const [email, setEmail] = useState("zi**************92@gmail.com")
+  const [email, setEmail] = useState("")
   const [code, setCode] = useState(["", "", "", "", "", ""])
   const inputRefs = useRef([])
 
@@ -78,7 +78,7 @@ export default function VerifyEmail() {
       <div className="w-full max-w-md bg-white rounded-lg shadow-sm p-8">
         <div className="space-y-6">
           <div className="flex items-center">
-            <h1 className="text-2xl font-semibold text-gray-700">Verify Your Email Address</h1>
+            <h1 className="text-2xl font-semibold text-blue-900">Verify Your Email Address</h1>
             <span
               className="ml-2 text-blue-500 text-sm border border-blue-200 px-1 rounded">✓</span>
           </div>
@@ -111,7 +111,7 @@ export default function VerifyEmail() {
 
             <button
               onClick={handleVerify}
-              className="w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded transition-colors">
+              className="w-full py-3 bg-blue-800 hover:bg-blue-900 cursor-pointer border text-white font-medium rounded-xl transition-colors">
               Verify my email
             </button>
 
@@ -126,7 +126,7 @@ export default function VerifyEmail() {
               <div className="flex items-center justify-center">
                 <Link
                   href="/change-email"
-                  className="text-blue-700 hover:underline flex items-center">
+                  className="text-blue-500 hover:underline flex items-center">
                   Change Email Address
                   <PenLine className="ml-1 h-4 w-4" />
                 </Link>
@@ -134,7 +134,7 @@ export default function VerifyEmail() {
             </div>
           </div>
 
-          <div className="text-center text-gray-500 text-sm pt-4">© 2025 PaySolo Ltd All rights reserved.</div>
+
         </div>
       </div>
     </div>
