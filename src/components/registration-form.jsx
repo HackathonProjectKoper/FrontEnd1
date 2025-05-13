@@ -14,6 +14,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import {Link} from "react-router-dom";
+import DatePicker from "../../date-picker.jsx";
 
 const formSchema = z
   .object({
@@ -108,31 +109,7 @@ export function RegistrationForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="dateOfBirth">Date of birth</Label>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                            variant="outline"
-                            className={cn(
-                                "w-full justify-start text-left font-normal",
-                                !selectedDate && "text-muted-foreground"
-                            )}>
-                          <CalendarIcon className="mr-2 h-4 w-4"/>
-                          {selectedDate ? format(selectedDate, "PPP") : "Pick a date"}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0">
-                        <Calendar
-                            mode="single"
-                            selected={selectedDate}
-                            onSelect={(date) => {
-                              setDate(date)
-                              if (date) setValue("dateOfBirth", date)
-                            }}
-                            initialFocus
-                            disabled={(date) => date > new Date() || date < new Date("1900-01-01")}/>
-                      </PopoverContent>
-                    </Popover>
+                    <DatePicker> </DatePicker>
                     {errors.dateOfBirth && <p className="text-sm text-red-500">{errors.dateOfBirth.message}</p>}
                   </div>
 
