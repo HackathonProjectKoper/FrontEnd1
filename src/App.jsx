@@ -1,23 +1,21 @@
-import React from 'react'
-import {LoginForm} from "@/components/login-form.jsx";
-import {RegistrationForm} from "@/components/registration-form";
-import {BrowserRouter,Routes ,Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { LoginForm } from './components/login-form';
+import { RegistrationForm } from './components/registration-form';
+import VerifyEmail from './components/verify-email/page';
+import ChangeEmail from "@/components/change-email/page.jsx";
 
-
-const App = () => {
+function App() {
     return (
         <BrowserRouter>
-
-                    <Routes>
-
-                        <Route path="/Register" element={<RegistrationForm />} />
-
-                        <Route path="/Login" element={<LoginForm />} />
-
-
-                    </Routes>
-
+            <Routes>
+                <Route path="/" element={<LoginForm />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/register" element={<RegistrationForm />} />
+                <Route path="/verify-email" element={<VerifyEmail />} />
+                <Route path="/change-email" element={<ChangeEmail />} />
+            </Routes>
         </BrowserRouter>
-    )
+    );
 }
-export default App
+
+export default App;
