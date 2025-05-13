@@ -12,6 +12,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
+import {Link} from "react-router-dom";
 
 const formSchema = z
   .object({
@@ -146,7 +147,7 @@ export function RegistrationForm() {
         <p className="text-sm text-muted-foreground">
           Already have an account?{" "}
           <a href="#" className="text-primary hover:underline">
-            Sign in
+              <Link to="/Login" className="text-blue-500"> Sign in</Link>
           </a>
         </p>
       </CardFooter>

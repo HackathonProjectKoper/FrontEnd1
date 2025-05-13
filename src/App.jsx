@@ -1,14 +1,23 @@
 import React from 'react'
 import {LoginForm} from "@/components/login-form.jsx";
 import {RegistrationForm} from "@/components/registration-form";
+import {BrowserRouter,Routes ,Route} from "react-router-dom";
+
 
 const App = () => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24">
-            <RegistrationForm />
+        <BrowserRouter>
 
-        </div>
+                    <Routes>
 
+                        <Route path="/Register" element={<RegistrationForm />} />
+
+                        <Route path="/Login" element={<LoginForm />} />
+
+
+                    </Routes>
+
+        </BrowserRouter>
     )
 }
 export default App
