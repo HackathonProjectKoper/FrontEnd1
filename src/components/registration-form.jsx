@@ -14,7 +14,9 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import {Link} from "react-router-dom";
-import DatePicker from "../../date-picker.jsx";
+
+
+
 
 const formSchema = z
   .object({
@@ -109,7 +111,7 @@ export function RegistrationForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <DatePicker> </DatePicker>
+
                     {errors.dateOfBirth && <p className="text-sm text-red-500">{errors.dateOfBirth.message}</p>}
                   </div>
 
@@ -133,9 +135,9 @@ export function RegistrationForm() {
               <CardFooter className="flex justify-center border-t p-4">
                 <p className="text-sm text-muted-foreground">
                   Already have an account?{" "}
-                  <a href="#" className="text-primary hover:underline">
-                    <Link to="/Login" className="text-blue-500"> Sign in</Link>
-                  </a>
+
+                    <Link to="/Login" className="text-blue-500 hover:underline"> Sign in</Link>
+
                 </p>
 
 
@@ -143,7 +145,7 @@ export function RegistrationForm() {
 
             </Card>
             <svg className="absolute bottom-0 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-              <path fill="#003c84" fill-opacity="1"
+              <path fill="#003c84" fillOpacity="1"
                     d="M0,224L60,218.7C120,213,240,203,360,176C480,149,600,107,720,101.3C840,96,960,128,1080,122.7C1200,117,1320,75,1380,53.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
             </svg>
 

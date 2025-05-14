@@ -14,7 +14,7 @@ const pathname = useLocation().pathname;
             <LogoMain className="h-30 w-70 left-10 top-10 pb-4 ml-[-40px]   "/>
             <Button variant="default" size="lg" className="bg-transparent font-light text-white hover:cursor-pointer"> Home</Button>
             <Button variant="default" size="lg" className="bg-transparent font-light text-white hover:cursor-pointer hover:"> Business</Button>
-            <Button variant="default" size="lg" className="bg-transparent font-light text-white hover:cursor-pointer hover:"> Solution</Button>
+            <Button variant="default" size="lg" className="bg-transparent font-light text-white hoverMain1:cursor-pointer hover:"> Solution</Button>
             <Button variant="default" size="lg" className="bg-transparent font-light text-white hover:cursor-pointer hover:"> Fees</Button>
             <Button variant="default" size="lg" className="bg-transparent font-light text-white hover:cursor-pointer hover:"> FAQ</Button>
 
