@@ -6,8 +6,10 @@ import ChangeEmail from "@/components/change-email/page.jsx";
 import MainPage  from "@/components/main-page/MainPage.jsx";
 import Header from "@/components/main-page/Header.jsx";
 import LogoMain from "@/assets/logo.jsx";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 function App() {
     return (
+        <GoogleOAuthProvider clientId="88173405945-q343j1kadm1t2lefgcisco3sionsvch4.apps.googleusercontent.com">
 
         <BrowserRouter>
             <Routes>
@@ -19,6 +21,7 @@ function App() {
 
             </Routes>
         </BrowserRouter>
+        </GoogleOAuthProvider>
     );
 }
 
