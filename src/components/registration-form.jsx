@@ -14,7 +14,8 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import {Link} from "react-router-dom";
-
+import {AuthButtons} from "@/components/ui/auth-buttons.jsx";
+import { Checkbox } from "@/components/ui/checkbox"
 
 
 
@@ -74,8 +75,11 @@ export function RegistrationForm() {
 
             <Card className="w-full max-w-md shadow-lg z-10">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-blue-900">Create an account</CardTitle>
-                <CardDescription>Enter your information to register</CardDescription>
+                <CardTitle className="text-2xl font-bold text-blue-900 text-center">Create an account</CardTitle>
+              <AuthButtons  centered={true }/>
+
+
+                <CardDescription className="text-center mt-2 mb-2">Enter your information to register</CardDescription>
               </CardHeader>
               <CardContent>
 
@@ -139,6 +143,17 @@ export function RegistrationForm() {
                     <Link to="/Login" className="text-blue-500 hover:underline"> Sign in</Link>
 
                 </p>
+
+                <div className="flex items-center space-x-2 ">
+                  <Checkbox id="terms" />
+                  <label
+                      htmlFor="terms"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Accept terms and conditions
+                  </label>
+                </div>
+
 
 
               </CardFooter>
