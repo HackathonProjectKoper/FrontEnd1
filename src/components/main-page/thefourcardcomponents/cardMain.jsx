@@ -9,7 +9,6 @@ const CardMain = ({title,text}) => {
             <CardTitle className="text-blue-900 text-base">{title}</CardTitle>
         </CardHeader>
         <CardContent>
-            <p className="text-gray-600 text-sm">{text}</p>
         </CardContent>
     </Card>
 
