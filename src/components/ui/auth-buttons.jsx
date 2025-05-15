@@ -1,7 +1,7 @@
 import { Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {useGoogleLogin} from "@react-oauth/google";
-export function AuthButtons() {
+export function AuthButtons({centered = true} ) {
     // Handle successful login
     const handleLoginSuccess = async (credentialResponse) => {
         console.log(credentialResponse);
@@ -43,7 +43,7 @@ export function AuthButtons() {
 
 
 
-    <div className="flex flex-row gap-2 w-fit mx-auto">
+    <div className={`${centered? 'mx-auto' : ''} flex flex-row gap-2 w-fit`}>
       <Button
         variant="outline"
         size="icon"

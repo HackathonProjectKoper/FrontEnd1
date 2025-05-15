@@ -39,7 +39,7 @@ export function LoginForm({
 
 
                 <div>
-                  <AuthButtons/>
+                  <AuthButtons centered={true}/>
 
                 </div>
 
