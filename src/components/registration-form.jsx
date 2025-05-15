@@ -136,8 +136,8 @@ export function RegistrationForm() {
                   </Button>
                 </form>
               </CardContent>
-              <CardFooter className="flex justify-center border-t p-4">
-                <p className="text-sm text-muted-foreground">
+              <CardFooter className="flex flex-col items-center border-t p-4 space-y-4">
+                <p className="text-sm text-muted-foreground text-center">
                   Already have an account?{" "}
 
                     <Link to="/Login" className="text-blue-500 hover:underline"> Sign in</Link>

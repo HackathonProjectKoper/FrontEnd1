@@ -4,12 +4,12 @@ import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.jsx
 const CardMain = ({title,text}) => {
     return (
 
-    <Card className="w-1/6 bg-white  shadow-lg ">
+    <Card className="bg-white  shadow-md hover:shadow-lg transition-shadow rounded-xl">
         <CardHeader>
-            <CardTitle className="text-blue-900 text-xl">{title}</CardTitle>
+            <CardTitle className="text-blue-900 text-base">{title}</CardTitle>
         </CardHeader>
         <CardContent>
-            <p className="text-gray-600 ">{text}</p>
+            <p className="text-gray-600 text-sm">{text}</p>
         </CardContent>
     </Card>
 
