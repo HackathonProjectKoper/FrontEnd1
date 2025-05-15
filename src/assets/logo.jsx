@@ -12,7 +12,7 @@ const LogoMain = (props) => (
             {"\nCreated by potrace 1.16, written by Peter Selinger 2001-2019\n"}
         </metadata>
         <g
-            transform="translate(0.000000,283.000000) scale(0.120000,-0.120000)"
+            transform="translate(0.000000,283.000000) scale(0.130000,-0.130000)"
             fill="#FFFFFF"
             stroke="none"
         >
